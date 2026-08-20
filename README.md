@@ -117,7 +117,7 @@ Para un dominio propio: añádelo en **Workers & Pages → SubGen → Custom dom
 
 - **Sin memoria:** usa modelo Ligero, un archivo más corto y cierra otras pestañas.
 - **Codec no compatible:** convierte a MP4 H.264/AAC, WebM o WAV.
-- **Modelo no descarga:** comprueba red, cuota de almacenamiento y que `huggingface.co`/`cdn.jsdelivr.net` no estén bloqueados.
+- **Modelo no descarga:** comprueba red, cuota de almacenamiento y que `huggingface.co`, sus CDN bajo `hf.co` y `cdn.jsdelivr.net` no estén bloqueados.
 - **Caché dañada:** usa “Liberar modelos” y vuelve a procesar.
 - **Safari/iPhone:** prueba un audio corto; si falla, usa Chromium de escritorio. No afirmamos compatibilidad no verificada.
 
