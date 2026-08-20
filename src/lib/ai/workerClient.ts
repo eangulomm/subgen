@@ -34,11 +34,18 @@ export class AIWorkerClient {
         }
         if (event.data.type === 'error') {
           worker.removeEventListener('message', listener);
+          console.error(
+            '[SubGen AI worker]',
+            event.data.error.technicalMessage ?? event.data.error.userMessage,
+          );
           reject(
             new AppError(
               event.data.error.code,
               event.data.error.userMessage,
               event.data.error.recoverable,
+              event.data.error.technicalMessage
+                ? { cause: new Error(event.data.error.technicalMessage) }
+                : undefined,
             ),
           );
           return;
