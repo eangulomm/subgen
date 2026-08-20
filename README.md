@@ -8,7 +8,7 @@ SubGen genera y traduce subtítulos directamente en el navegador. El video y el 
 
 ## Demo
 
-La URL de producción se añadirá tras completar el despliegue de Cloudflare Pages. El proyecto funciona localmente con los comandos de abajo.
+[Abrir SubGen en producción](https://subgen-e93.pages.dev/). El proyecto también funciona localmente con los comandos de abajo.
 
 ## Características
 
