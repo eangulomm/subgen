@@ -30,6 +30,18 @@ let cancelled = false;
 env.useBrowserCache = true;
 env.useWasmCache = true;
 
+const transformerFetch = env.fetch;
+env.fetch = async (input, init): Promise<Response> => {
+  try {
+    return (await transformerFetch(input, init)) as Response;
+  } catch (error) {
+    const url = new URL(input.toString());
+    url.search = '';
+    url.hash = '';
+    throw new Error(`Failed to fetch ${url.toString()}`, { cause: error });
+  }
+};
+
 function post(message: WorkerResponse): void {
   self.postMessage(message);
 }
