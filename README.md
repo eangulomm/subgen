@@ -101,6 +101,10 @@ El artefacto `dist/` es estático y contiene `_headers`/`_redirects` para Cloudf
 - Node: 22
 - variables/secretos: ninguno
 
+Los assets usan el comportamiento de caché con revalidación de Pages. No se marcan como
+`immutable`: el Worker de IA recibe su propia CSP en la respuesta y debe poder revalidar esas
+cabeceras cuando cambie la política de red.
+
 Cloudflare Pages Free mantiene solicitudes de assets estáticos gratuitas e ilimitadas; actualmente permite 500 builds/mes, 20.000 archivos y 25 MiB por asset. El asset mayor de este build es el WASM de ONNX Runtime (~22,5 MiB), dentro del límite.
 
 Para un dominio propio: añádelo en **Workers & Pages → SubGen → Custom domains** y aplica el registro DNS indicado por Cloudflare. No es necesario modificar la app, salvo actualizar `canonical`, `robots.txt` y `sitemap.xml`.
@@ -118,7 +122,7 @@ Para un dominio propio: añádelo en **Workers & Pages → SubGen → Custom dom
 - **Sin memoria:** usa modelo Ligero, un archivo más corto y cierra otras pestañas.
 - **Codec no compatible:** convierte a MP4 H.264/AAC, WebM o WAV.
 - **Modelo no descarga:** comprueba red, cuota de almacenamiento y que `huggingface.co`, sus CDN bajo `hf.co` y `cdn.jsdelivr.net` no estén bloqueados.
-- **Caché dañada:** usa “Liberar modelos” y vuelve a procesar.
+- **Caché dañada:** usa “Liberar modelos”, recarga la página y vuelve a procesar.
 - **Safari/iPhone:** prueba un audio corto; si falla, usa Chromium de escritorio. No afirmamos compatibilidad no verificada.
 
 ## Seguridad y licencias
