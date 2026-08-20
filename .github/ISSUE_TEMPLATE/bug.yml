@@ -1,0 +1,32 @@
+name: Bug report
+description: Reporta un fallo reproducible sin adjuntar contenido privado.
+title: 'bug: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: No adjuntes videos, audio, subtítulos privados ni rutas locales.
+  - type: input
+    id: browser
+    attributes:
+      label: Navegador y versión
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Dispositivo/SO
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos mínimos
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado y observado
+    validations:
+      required: true
