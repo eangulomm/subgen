@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f4ed"/>
+  <circle cx="600" cy="-20" r="430" fill="#dff3e9"/>
+  <rect x="105" y="94" width="82" height="82" rx="24" fill="#d8ff6b"/>
+  <text x="146" y="152" text-anchor="middle" font-family="Arial" font-size="44" font-weight="800" fill="#063b2d">S</text>
+  <text x="210" y="150" font-family="Arial" font-size="30" font-weight="800" letter-spacing="7" fill="#122520">SUBGEN</text>
+  <text x="100" y="315" font-family="Georgia" font-size="76" fill="#122520">Subtítulos privados.</text>
+  <text x="100" y="400" font-family="Georgia" font-size="76" fill="#122520">Directo en tu dispositivo.</text>
+  <rect x="100" y="474" width="536" height="60" rx="30" fill="#dff3e9" stroke="#76b69f"/>
+  <text x="135" y="513" font-family="Arial" font-size="23" font-weight="700" fill="#075746">Sin subir videos · Sin cuentas · IA local</text>
+</svg>

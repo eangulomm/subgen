@@ -1,0 +1,12 @@
+{
+  "name": "SubGen — subtítulos privados",
+  "short_name": "SubGen",
+  "description": "Genera y traduce subtítulos directamente en tu dispositivo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f4ed",
+  "theme_color": "#071d1a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
