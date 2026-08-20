@@ -27,4 +27,10 @@ describe('production Content-Security-Policy', () => {
     expect(sources).not.toContain('*');
     expect(sources).not.toContain('https:');
   });
+
+  it('does not freeze worker response headers in an immutable browser cache', () => {
+    expect(headers).not.toMatch(
+      /\/assets\/\*\s+Cache-Control:\s*public,\s*max-age=31536000,\s*immutable/,
+    );
+  });
 });
